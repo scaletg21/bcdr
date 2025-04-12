@@ -1,0 +1,167 @@
+/*
+<--!----------------------------------------------------------------!-->
+<--! Sales Report !-->
+<--!----------------------------------------------------------------!-->
+*/
+.nxl-container {
+	.nxl-content {
+		.main-content {
+			.sales-pipeline-tabs {
+				.nav-item {
+					.nav-link {
+						padding: 15px 30px;
+						color: $brand-dark;
+						background-color: $white;
+						border-radius: $radius-sm;
+						border: 1px dashed $border-color-2;
+						&.active {
+							color: $black;
+							border: 1px dashed $gray-500;
+						}
+					}
+				}
+			}
+			.upcoming-event-report-lead {
+				.list-group-item {
+					padding-top: 25px;
+					padding-bottom: 26px;
+				}
+			}
+		}
+	}
+}
+
+
+
+.total-score {
+
+	.CircularProgressbar {
+		width: 65%;
+		vertical-align: middle;
+		.CircularProgressbar-background {
+			fill: rgba(240, 242, 252, 0.933);
+		}
+		.CircularProgressbar-trail {
+			stroke: rgb(255, 255, 255);
+			stroke-linecap: butt;
+			transform: rotate(0deg);
+			transform-origin: center center;
+			stroke-dasharray: 289.027px, 289.027px;
+			stroke-dashoffset: 0px;
+		}
+		.CircularProgressbar-path {
+			stroke: rgb(62, 152, 199);
+			stroke-width: 4;
+			stroke-linecap: round;
+			transition: stroke-dashoffset 0.5s;
+			transform: rotate(0deg);
+			transform-origin: center center;
+			stroke-dasharray: 289.027px, 289.027px;
+			stroke-dashoffset: 106.94px;
+		}
+		.CircularProgressbar-text {
+			fill: rgb(40, 60, 80);
+			font-size: 16px;
+			font-family: $font-poppins;
+			font-weight: 700;
+			dominant-baseline: middle;
+    		text-anchor: middle;
+		}
+	}
+	circle-progress::part(base) {
+		width: 225px; 
+		height: 225px;
+	}
+	circle-progress::part(circle) {
+		stroke: $white;
+		stroke-width: 15px;
+		fill: $bg-soft-primary;
+	}
+	circle-progress::part(value) {
+		//fill: $brand-dark;
+		stroke: $primary;
+		stroke-width: 6px;
+		stroke-linecap: round;
+	}
+	circle-progress::part(text) {
+		fill: $brand-dark;
+		font-size: $font-15;
+		font-weight: $font-700;
+		font-family: $font-poppins;
+	}
+
+}
+
+.circle-progress-identify,
+.circle-progress-react,
+.circle-progress-resolve,
+.circle-progress-recover {
+
+	.CircularProgressbar {
+		width: 43%;
+		vertical-align: middle;
+		
+		.CircularProgressbar-background {
+			fill: transparent;
+		}
+		.CircularProgressbar-trail {
+			stroke: #E3E7F9;
+			stroke-width: 3;
+			stroke-linecap: round;
+			transform: rotate(0deg);
+			transform-origin: center center;
+			stroke-dasharray: 289.027px, 289.027px;
+			stroke-dashoffset: 0px;
+		}
+		.CircularProgressbar-path {
+			stroke: rgb(62, 152, 199);
+			stroke-width: 6;
+			stroke-linecap: round;
+			transition: stroke-dashoffset 0.5s;
+			transform: rotate(0deg);
+			transform-origin: center center;
+			stroke-dasharray: 289.027px, 289.027px;
+			stroke-dashoffset: 106.94px;
+		}
+		.CircularProgressbar-text {
+			fill: rgb(40, 60, 80);
+			font-size: 13px;
+			font-family: $font-poppins;
+			font-weight: 700;
+			dominant-baseline: middle;
+    		text-anchor: middle;
+		}
+	}
+}
+.sales-progress-1 {
+	.circle-progress-value {
+		stroke: $primary;
+	}
+	.circle-progress-circle {
+		stroke: lighten($primary, 42);
+	}
+}
+.sales-progress-2 {
+	.circle-progress-value {
+		stroke: $success;
+	}
+	.circle-progress-circle {
+		stroke: lighten($success, 45);
+	}
+}
+.sales-progress-3 {
+	.circle-progress-value {
+		stroke: $warning;
+	}
+	.circle-progress-circle {
+		stroke: lighten($warning, 35);
+	}
+}
+.sales-progress-4 {
+	.circle-progress-value {
+		stroke: $danger;
+	}
+	.circle-progress-circle {
+		stroke: lighten($danger, 35);
+	}
+}
