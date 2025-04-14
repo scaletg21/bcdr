@@ -1,10 +1,8 @@
 # SCALE BCDR APP
 
-SCALE Technology Group - Business Continuity & Disaster Recovery Framework 
+SCALE Technology Group - Business Continuity & Disaster Recovery Framework Assesment
 
-This application was created using the following:
-
-
+This application is hosted in the SCALE private cloud and was created using the following:
 
 [![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&amp;logo=react&amp;logoColor=61DAFB)](#)
 [![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&amp;logo=vite&logoColor=fff)](#)
