@@ -1,6 +1,8 @@
 # SCALE BCDR APP
 
-SCALE Technology Group - Business Continuity & Disaster Recovery Framework Assesment
+SCALE Technology Group - Business Continuity & Disaster Recovery Assesment
+
+Frontend & Backend code. This does not include SCALE question, scoring, and metadata that is collected during the assesment. Only the logic to gather data. 
 
 This application is hosted in the SCALE private cloud and was created using the following:
 
