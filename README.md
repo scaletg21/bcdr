@@ -12,7 +12,7 @@ This application was created using the following:
 [![npm](https://img.shields.io/badge/npm-CB3837?logo=npm&logoColor=fff)](#)
 [![Microsoft Azure](https://custom-icon-badges.demolab.com/badge/Microsoft%20Azure-0089D6?logo=msazure&logoColor=white)](#)
 [![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?logo=chartdotjs&logoColor=fff)](#)
-[![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?logo=mongodb&logoColor=white)](#)
+[![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&amp;logo=chartdotjs&amp;logoColor=fff)](#)
 [![MongoDB](https://img.shields.io/badge/MongoDB-%234ea94b.svg?style=for-the-badge&amp;logo=mongodb&amp;logoColor=white)](#)
 [![Bootstrap](https://img.shields.io/badge/Bootstrap-7952B3.svg?style=for-the-badge&amp;logo=bootstrap&amp;logoColor=white)](#)
 
