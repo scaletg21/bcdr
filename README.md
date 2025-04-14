@@ -7,7 +7,7 @@ This application was created using the following:
 
 
 [![React](https://img.shields.io/badge/React-%2320232a.svg?style=for-the-badge&amp;logo=react&amp;logoColor=61DAFB)](#)
-[![Vite](https://img.shields.io/badge/Vite-646CFF?logo=vite&logoColor=fff)](#)
+[![Vite](https://img.shields.io/badge/Vite-646CFF?style=for-the-badge&amp;logo=vite&logoColor=fff)](#)
 [![NodeJS](https://img.shields.io/badge/Node.js-6DA55F?style=for-the-badge&amp;logo=node.js&amp;logoColor=white)](#)
 [![npm](https://img.shields.io/badge/npm-CB3837?style=for-the-badge&amp;logo=npm&amp;logoColor=fff)](#)
 [![Chart.js](https://img.shields.io/badge/Chart.js-FF6384?style=for-the-badge&amp;logo=chartdotjs&amp;logoColor=fff)](#)
