@@ -12,10 +12,10 @@ const PORT = process.env.PORT || 3000
 
 app.use(cors())
 app.use(express.json())
-app.use(questions)
-app.use(company)
-app.use(answer)
-app.use(results)
+app.use('/api', questions)
+app.use('/api', company)
+app.use('/api', answer)
+app.use('/api', results)
 
 app.listen(PORT, () => {
     connect.connectToServer()

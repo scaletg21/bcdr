@@ -2,12 +2,14 @@
 import axios from "axios";
 import { data } from "react-router-dom";
 
-const URL = "http://165.22.47.81:3000"
+const URL = "http://192.168.2.226:3000"
+
+axios.defaults.baseURL = 'http://192.168.2.226:3000/api' //can use this method and instead calls '/questions' no need for ${URL}
 
 //################ QUESTIONS ################
 //# Get All Questions
 export async function getQuestions() {
-    const response = await axios.get(`${URL}/questions`)
+    const response = await axios.get(`/questions`)
     //console.log(response)
     if (response.status === 200) {
         return response.data
@@ -21,7 +23,7 @@ export async function getQuestion(questionId) {
     //console.log(questionId)
     //"http://localhost:3000/questions/12345"
     
-    const response = await axios.get(`${URL}/questions/${questionId}`)
+    const response = await axios.get(`/questions/${questionId}`)
     const question = response.data
     return question
 }
@@ -31,14 +33,14 @@ export async function getQuestion(questionId) {
 //## Create Company and Results Schema
 export async function createCompany(company) {
     console.log(company)
-    const response = await axios.post(`${URL}/company`, company)
+    const response = await axios.post(`/company`, company)
     return response 
 }
 
 export async function updateCompany(company) {
     //"http://localhost:3000/users/12345"
     console.log(company)
-    const response = await axios.put(`${URL}/company/${company.companyid}`, company)
+    const response = await axios.put(`/company/${company.companyid}`, company)
     return response
 }
 
@@ -46,14 +48,14 @@ export async function updateCompany(company) {
 //## Submit Answer to database
 export async function createAnswer(answer) {
     //console.log(answer)
-    const response = await axios.post(`${URL}/answer`, answer)
+    const response = await axios.post(`/answer`, answer)
     return response 
 }
 
 ///#### Get All Answers based on CompanyID
 export async function getAnswers(answer) {
     //console.log(answer)
-    const response = await axios.get(`${URL}/answer`, {params: { companyid: answer.companyid, categoryid: answer.categoryid },})
+    const response = await axios.get(`/answer`, {params: { companyid: answer.companyid, categoryid: answer.categoryid },})
       //  console.log(response.data)
     if (response.status === 200) {
         return response.data
@@ -69,7 +71,7 @@ export async function getResults(companyId) {
     console.log(companyId)
     //"http://localhost:3000/questions/12345"
     
-    const response = await axios.get(`${URL}/results/${companyId}`)
+    const response = await axios.get(`/results/${companyId}`)
     const results = response.data
     return results
 }
