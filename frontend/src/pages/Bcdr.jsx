@@ -1,4 +1,3 @@
-//import { ReadBlog } from './pages/ReadBlog'
 import { useState } from "react"
 import Button from 'react-bootstrap/Button';
 import scaleLogoBig from '../assets/images/scale-logo-pp.png'

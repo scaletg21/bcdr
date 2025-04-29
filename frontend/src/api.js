@@ -37,11 +37,23 @@ export async function createCompany(company) {
     return response 
 }
 
+//## Update Company
 export async function updateCompany(company) {
     //"http://localhost:3000/users/12345"
     console.log(company)
     const response = await axios.put(`/company/${company.companyid}`, company)
     return response
+}
+
+//# Get All Companies
+export async function getCompany() {
+    const response = await axios.get(`/company`)
+    //console.log(response)
+    if (response.status === 200) {
+        return response.data
+    } else {
+        return
+    }
 }
 
 //################ ANSWER ################
@@ -75,4 +87,16 @@ export async function getResults(companyId) {
     const results = response.data
     return results
 }
+
+//################ REPORT ################
+// ### Get Results based on the company ID
+export async function getReport(companyId) {
+    console.log(companyId)
+    //"http://localhost:3000/questions/12345"
+    
+    const response = await axios.get(`/report/${companyId}`)
+    const results = response.data
+    return results
+}
+
 

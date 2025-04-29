@@ -54,6 +54,10 @@ import { Recover } from './pages/Recover'
 import { PreFinal } from './pages/PreFinal'
 import { CalculateResults } from './pages/CalculateResults'
 import { QuestLayout } from  './components/QuestLayout'
+import { AnswerLayout } from  './components/AnswerLayout'
+import { CompanyList } from './pages/CompanyList'
+import { ReportResults } from './pages/ReportResults'
+import { AnswersList } from './pages/AnswersList'
 //import { useEffect } from 'react'
 import axios from "axios"
 
@@ -116,6 +120,12 @@ function App() {
           <Route path="/PreFinal" element={<PreFinal/>} />
           <Route path="/CalculateResults" element={<CalculateResults/>} />
           <Route path="/FinalResults" element={<FinalResults/>} />
+        </Route>
+        <Route element={<AnswerLayout/>}>
+        <Route path="/CompanyList" element={<CompanyList/>} />
+        <Route path="/ReportResults/:_id" element={<ReportResults/>} />
+        <Route path="/AnswersList/:_id" element={<AnswersList/>} />
+
         </Route>
       </Routes>
     </Router>

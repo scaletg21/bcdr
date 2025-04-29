@@ -1,23 +1,23 @@
 import { getResults } from "../api"
 import { useState, useEffect } from "react"
-import useCompanyStore from '../components/companyStore';
 import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
+import { useParams, useNavigate } from "react-router-dom";
+import { Backspace } from 'react-bootstrap-icons'
 
-export function FinalResults() {
 
-    
+export function ReportResults() {
+
+    const navigate = useNavigate();
     const [results, setResults] = useState([])
     const [isInitialDataLoading, setIsInitialDataLoading] = useState(true)
-    const [dataReady, setDataReady] = useState(false)
-    
-
-    const companyId = useCompanyStore((state) => state.companyId); // Access the companyId
-    const [Company, setCompany] = useState('')
     //const [Company, setCompany] = useState('67e713af47fe72819fd1bbe6')
+    const [Company, setCompany] = useState('')
+    const companyId  = useParams()
+    
     useEffect(() => {
         try {
-            setCompany(companyId.id)
+            setCompany(companyId._id)
         } catch (error) {
             console.error('Error getting CompanyID', error)
         } finally {
@@ -25,7 +25,11 @@ export function FinalResults() {
         }
         
     }, [companyId])
-    
+
+    const goBack = () => {
+        navigate(-1); // Go back to the previous page
+    }
+
     useEffect(() => {
         if (!isInitialDataLoading) {
             async function loadAllResults() {
@@ -108,7 +112,10 @@ export function FinalResults() {
     return (
        
         <div>
-           
+            <button onClick={goBack} class="btn btn-secondary btn-sm report-btn">
+                <Backspace size={12} className="me-2" />
+                <span>Go Back</span>
+            </button>
             <h1>{results.company}: FINAL RESULTS</h1>
             <hr className="border-dashed my-3"></hr>
             

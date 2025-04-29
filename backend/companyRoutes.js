@@ -9,6 +9,20 @@ require("dotenv").config({path: "./config.env"});
 let companyRoutes = express.Router()
 
 
+//###### - Retreive All Companies
+//http://app.scaletg.com:3000/questions
+// adding async & await - waits until data finishes processing before moving on 
+companyRoutes .route("/company").get(async (request, response) => {
+    let db = database.getDb()
+    let data = await db.collection("results").find({}).toArray()
+    if (data.length >0) {
+        response.json(data)
+    } else {
+        throw new Error("Data was not found :(")
+    }
+})
+
+
 //###### - Create Company
 companyRoutes.route("/company").post(async (request, response) => {
     let db = database.getDb()

@@ -6,6 +6,7 @@ const questions = require("./questRoutes") //this is defining the app.use(questi
 const company = require("./companyRoutes")
 const answer = require("./answerRoutes")
 const results = require("./resultRoutes")
+const report = require("./reportRoutes")
 
 const app = express()
 const PORT = process.env.PORT || 3000
@@ -16,6 +17,7 @@ app.use('/api', questions)
 app.use('/api', company)
 app.use('/api', answer)
 app.use('/api', results)
+app.use('/api', report)
 
 app.listen(PORT, () => {
     connect.connectToServer()

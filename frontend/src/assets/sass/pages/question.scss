@@ -92,7 +92,73 @@
 				padding: 10px;
 				font-family: $font-raleway;
 			}
+			.card-body {
+				.bcdr-info-bottom { text-align: left;}
+			}
+			/* ###################### */
+			/* QUESTION ADMIN BACKEND */
+			.page-header {
+				display: flex;
+				align-items: center;
+				top: $header-height;
+				left: $navigation-width;
+				right: 0;
+				z-index: 1023;
+				min-height: 65px;
+				padding: 0 30px;
+				background: $white;
+				box-shadow: $card-shadow;
 			
+				.page-block {
+					width: calc(100% - 50%);
+				}
+			
+				.page-header-title {
+					display: inline-block;
+				}
+			
+				h5 {
+					margin-bottom: 0;
+					margin-right: 8px;
+					padding-right: 10px;
+					color: $brand-dark;
+					font-weight: $font-600;
+					border-right: 1px solid darken($body-bg, 10%);
+				}
+			
+				.breadcrumb {
+					padding: 0;
+					display: inline-flex;
+					margin-bottom: 0;
+					background: transparent;
+					font-size: 13px;
+					color: $brand-muted;
+					font-weight: $font-800;
+			
+					a {
+						color: $brand-dark;
+					}
+			
+					.breadcrumb-item {
+						a:hover {
+							color: $primary;
+						}
+			
+						+.breadcrumb-item::before {
+							position: relative;
+							top: 2px;
+						}
+			
+						&:last-child {
+							opacity: 0.75;
+							font-weight: $font-400;
+						}
+					}
+				
+					
+				}
+			}
+			.answer { text-transform: uppercase; font-weight: $font-800;}
 		}
 	}
 }
